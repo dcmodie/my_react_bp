@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './features/header/Header'
 import TodoList from './features/todos/todosList'
+import PersonalInfoPage from './features/personalInfo/PersonalInfoPage'
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <section>
         <h2>Welcome to the Redux Fundamentals example app!</h2>
         <Header />
-        <TodoList />
+        <PersonalInfoPage />
 
       </section>
     </div>

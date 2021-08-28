@@ -5,9 +5,9 @@ import { Provider } from 'react-redux'
 import App from './App'
 import store from './store'
 
-import { fetchTodos } from './features/todos/TodosSlice'
+//import { fetchTodos } from './features/todos/TodosSlice'
 
-store.dispatch(fetchTodos)
+//store.dispatch(fetchTodos)
 
 ReactDOM.render(
   // Render a `<Provider>` around the entire `<App>`,

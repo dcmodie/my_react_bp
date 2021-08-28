@@ -1,4 +1,4 @@
-import { client } from '../../api/client'
+//import { client } from '../../api/client'
 
 const initialState = [
   { id: 0, text: 'Learn React', completed: true },
@@ -47,7 +47,7 @@ export default function todosReducer(state = [], action) {
 }
 
 // Thunk function
-export async function fetchTodos(dispatch, getState) {
-  const response = await client.get('/fakeApi/todos')
-  dispatch({ type: 'todos/todosLoaded', payload: response.todos })
-}
+// export async function fetchTodos(dispatch, getState) {
+//   const response = await client.get('/fakeApi/todos')
+//   dispatch({ type: 'todos/todosLoaded', payload: response.todos })
+// }

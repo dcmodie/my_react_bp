@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import Header from '../header/Header'
 import TodoListItem from './TodoListItem'
 
 const selectTodos = state => state.todos
@@ -14,7 +15,12 @@ const TodoList = () => {
     return <TodoListItem key={todo.id} todo={todo} />
   })
 
-  return <ul className="todo-list">{renderedListItems}</ul>
+  return (
+    <div>
+      <Header />
+      <ul className="todo-list">{renderedListItems}</ul>
+    </div>
+    )
 }
 
 export default TodoList

@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './features/header/Header'
 import TodoList from './features/todos/todosList'
 import PersonalInfoPage from './features/personalInfo/PersonalInfoPage'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -17,8 +19,14 @@ function App() {
         </section>
       </nav>
       <section>
-        <Header />
-        <TodoList />
+        <Switch>
+          <Route path="/todo-list">  
+            <TodoList />
+          </Route>
+          <Route path="/personal-info">  
+            <PersonalInfoPage />
+          </Route>
+        </Switch>
 
       </section>
     </div>

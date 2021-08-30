@@ -1,5 +1,6 @@
 import React , {useState } from 'react';
 import {useDispatch} from 'react-redux';
+import "./header.css";
 
 const Header = ()=>{
 	const [text, setText] = useState('');
@@ -25,7 +26,7 @@ const Header = ()=>{
 	return (
 
 		<div onKeyDown={handleKeyDown} >
-			<input onChange={changeHandler} value={text}/>
+			<input id="header" onChange={changeHandler} value={text} placeholder="add item" style={{margin:"0 0 1.5rem 0;"}}/>
 		</div>
 		)
 }

@@ -9,7 +9,7 @@ function App() {
       <nav>
         <section>
 
-          <h1>hhhhh Example</h1>
+          <h1>My Boilerplate</h1>
           <div className="navContent">
             <div className="navLinks"></div>
             
@@ -17,9 +17,8 @@ function App() {
         </section>
       </nav>
       <section>
-        <h2>Welcome to the Redux Fundamentals example app!</h2>
         <Header />
-        <PersonalInfoPage />
+        <TodoList />
 
       </section>
     </div>

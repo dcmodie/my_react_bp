@@ -58,17 +58,23 @@ button {
 
 nav {
   display: flex;
-  padding: 0;
+  flex-wrap: nowrap;
   background: var(--redux-color);
+  flex-direction:  row;
+
 }
 
-nav section {
-  width: 100%;
+nav > div {
+  color: white;
+  margin: auto;
+
 }
 
 nav section h1,
-nav section {
+nav section a {
+  margin: auto;
   color: white;
+  padding: 20px;
 }
 
 /* Main content */

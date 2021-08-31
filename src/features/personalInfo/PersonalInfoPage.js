@@ -1,11 +1,9 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 
-const personalInfo = state => state.personalInfo;  //what is this
-
 const PersonalInfoPage = ()=>{
-	const pInfo = useSelector(personalInfo);//read from redux
-	const dispatch = useDispatch();//why is this necessary, write to redux
+	const pInfo = useSelector((state) => state.personalInfo );// pass into hook the function to get this data from the store
+	const dispatch = useDispatch();//write to reducer
 
 	const handleNameChange = (e)=>{
 		dispatch({ type: 'nameChanged', payload: e.target.value });
@@ -17,8 +15,8 @@ const PersonalInfoPage = ()=>{
 
 	return (
 		<div>
-			<input value={pInfo.name} onChange={ handleNameChange }/>
-			<input value={pInfo.street} onChange={ handleStreetChange }/>
+			<input value={pInfo.name} placeholder="name" onChange={ handleNameChange }/>
+			<input value={pInfo.street} placeholder="street" onChange={ handleStreetChange }/>
 		</div>
 	)
 

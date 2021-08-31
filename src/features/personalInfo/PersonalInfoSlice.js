@@ -1,6 +1,6 @@
 const initialState = {
-  name: 'name initial state',
-  street: 'street initial state'
+  name: 'aaa',
+  street: 'ccc'
 }
 
 export default function personalInfoReducer(state = initialState, action) {

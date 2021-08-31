@@ -7,7 +7,8 @@ import TodoListItem from './TodoListItem'
     return <TodoListItem key={todo.id} todo={todo} />
 */
 const TodoList = () => {
-  const todos = useSelector(state => state.todos)
+  const todos = useSelector(state => state.todos);
+  const name = useSelector (state =>state.personalInfo.name);
 
   // since `todos` is an array, we can loop over it
   const renderedListItems = todos.map(todo => {
@@ -16,6 +17,7 @@ const TodoList = () => {
 
   return (
     <div>
+      <div>{name}'s Todo List</div>
       <Header />
       <ul className="todo-list">{renderedListItems}</ul>
     </div>

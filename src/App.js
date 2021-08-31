@@ -8,29 +8,38 @@ import './index.css'
 
 function App() {
   return (
-    <div className="App">
-      <nav>
-        <section>
-          <h1>My Boilerplate</h1>
-          <Link to="/personal-info">Personal Info</Link>
-          <Link to="/todo-list">Todo List</Link>
-        </section>
-      </nav>
-      <section>
-        <Switch>
-          <Route exact path="/">  
-            <PersonalInfoPage />
-          </Route>
-          <Route path="/todo-list">  
-            <TodoList />
-          </Route>
-          <Route path="/personal-info">  
-            <PersonalInfoPage />
-          </Route>
-        </Switch>
+    <Router>
+      <div className="App">
+          <div className="title-container">
+            <div className="title">
+              <h1>My Boilerplate</h1>
+              <h5>CRA, react-router-dom, redux/hooks, hooks</h5>
 
-      </section>
-    </div>
+            </div>
+          </div>
+        <nav>
+
+          <section>
+            <Link to="/personal-info">Personal Info</Link>
+            <Link to="/todo-list">Todo List</Link>
+          </section>
+        </nav>
+        <section>
+          <Switch>
+            <Route exact path="/">  
+              <PersonalInfoPage />
+            </Route>
+            <Route path="/todo-list">  
+              <TodoList />
+            </Route>
+            <Route path="/personal-info">  
+              <PersonalInfoPage />
+            </Route>
+          </Switch>
+
+        </section>
+      </div>
+    </Router>
   )
 }
 

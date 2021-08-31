@@ -47,6 +47,24 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Title */
+.title {
+  margin:auto;
+  width: 30%;
+  border: 1px solid #73AD21;
+  color: white;
+}
+
+.title h1,
+.title h5
+ {
+  color: white;
+}
+
+.title-container{
+  width: 100%;
+  background : var(--redux-color)  ;
+}
 
 /* Navbar */
 
@@ -74,7 +92,13 @@ nav section h1,
 nav section a {
   margin: auto;
   color: white;
-  padding: 20px;
+  padding: 10px 10px 0px 10px;
+}
+
+nav section h5 {
+  margin:  auto;
+  color:  white;
+  padding: 0 10px 10px 5px;
 }
 
 /* Main content */

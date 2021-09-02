@@ -32,21 +32,6 @@ p {
   font-size: 1.1rem;
 }
 
-button {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
-  font-size: 100%;
-  vertical-align: baseline;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-  -webkit-appearance: none;
-  appearance: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 /* Title */
 .title {
   margin:auto;
@@ -114,19 +99,6 @@ section h1 {
   font-size: 3rem;
 }
 
-.button {
-  display: inline-block;
-  background: #1976d2;
-  color: white;
-  border-radius: 4px;
-  font-weight: 700;
-  padding: 0.75rem 1.5rem;
-}
-
-button:disabled,
-button:disabled:hover {
-  opacity: 0.5;
-}
 
 /* https://projects.lukehaas.me/css-loaders/ , Loader #3 */
 .loader {

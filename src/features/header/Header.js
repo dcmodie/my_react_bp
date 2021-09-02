@@ -26,7 +26,7 @@ const Header = ()=>{
 	return (
 
 		<div onKeyDown={handleKeyDown} >
-			<input id="header" onChange={changeHandler} value={text} placeholder="add item" style={{margin:"0 0 1.5rem 0;"}}/>
+			<input id="header" onChange={changeHandler} value={text} placeholder="add item" style={{margin:"0 0 1.5rem 0"}}/>
 		</div>
 		)
 }

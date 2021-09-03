@@ -6,6 +6,7 @@ const HooksExample = ()=>{
 	const [user2, setUser2] = useState(' ');
 	const [userAtMount, setUserAtMount] = useState(null);
 	const [color, setColor] = useState(0);
+	const [count, setCount] = useState(0);
 
 	useEffect(() => {//run on mount
 
@@ -35,6 +36,10 @@ const HooksExample = ()=>{
 		myFetch();
 	}
 
+	const onIncrementClicked = (e) =>{
+		setCount(count+1 );
+	}
+
 	return (
 		<div>
 			<div>useEffect run once, get user:</div>
@@ -49,6 +54,9 @@ const HooksExample = ()=>{
 			<div style={{"height":"20px"}}>{user2}</div>
 			<div>useEffect, run every time user2 updated:</div>
 			<div style={{'background':color, 'height':"100px", "width":"100px"}}></div>
+			<div>&nbsp;</div>
+			<button onClick={onIncrementClicked}>Increment</button>
+			<div>{count}</div>
 		</div>)
 }
 

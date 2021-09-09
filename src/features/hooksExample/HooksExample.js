@@ -1,18 +1,20 @@
 import React, {useState, useEffect} from 'react';
+import {useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 
 const HooksExample = ()=>{
 	const [user, setUser] = useState(' ');
 	const [user2, setUser2] = useState(' ');
-	const [userAtMount, setUserAtMount] = useState(null);
+	//const [userAtMount, setUserAtMount] = useState(null);
 	const [color, setColor] = useState(0);
 	const [count, setCount] = useState(0);
+	const userAtMount = useSelector((state)=>state.hooksExample.userAtMount)//read from reducer
+	const dispatch = useDispatch();//write to reducer
 
 	useEffect(() => {//run on mount
-
 		async function myFetch() {
 			const result = await axios("https://randomuser.me/api/");
-			setUserAtMount(result.data.results[0].name.first)
+			dispatch({type:"updateUserAtMount", payload: result.data.results[0].name.first})
 		}
 		myFetch();
     }, [])
@@ -42,7 +44,8 @@ const HooksExample = ()=>{
 
 	return (
 		<div>
-			<div>useEffect run once, get user:</div>
+			<div>useEffect run once, get user from server, </div>
+			<div>write to reducer, read from reducer:</div>
 			<div>{userAtMount}</div>
 			<div>&nbsp;</div>
 			<button onClick={onGetUserClick}>Get User</button>

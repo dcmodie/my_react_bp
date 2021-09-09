@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
+import './hooksExample.css'
 
 const HooksExample = ()=>{
 	const [user, setUser] = useState(' ');
@@ -43,18 +44,14 @@ const HooksExample = ()=>{
 	}
 
 	return (
-		<div>
-			<div>useEffect run once, get user from server, </div>
-			<div>write to reducer, read from reducer:</div>
-			<div>{userAtMount}</div>
-			<div>&nbsp;</div>
-			<button onClick={onGetUserClick}>Get User</button>
-			<div>User:</div>
-			<div style={{"height":"30px"}}>{user}</div>
-			<div>&nbsp;</div>
-			<button onClick={onGetUser2Click}>Get User2</button>
-			<div>User2:</div>
-			<div style={{"height":"20px"}}>{user2}</div>
+		<div className="hooks-example-flex-container">
+			<div>useEffect run once, get user from server, 
+			write to reducer, read from reducer:
+			{userAtMount}</div>
+			<div><button onClick={onGetUserClick}>Get User</button>
+			User:{user}</div>
+			<div><button onClick={onGetUser2Click}>Get User2</button>
+			User2:{user2}</div>
 			<div>useEffect, run every time user2 updated:</div>
 			<div style={{'background':color, 'height':"100px", "width":"100px"}}></div>
 			<div>&nbsp;</div>
@@ -64,3 +61,14 @@ const HooksExample = ()=>{
 }
 
 export default HooksExample;
+
+			//
+			// <div>&nbsp;</div>
+			// <button onClick={onGetUser2Click}>Get User2</button>
+			// <div>User2:</div>
+			// <div style={{"height":"20px"}}>{user2}</div>
+			// <div>useEffect, run every time user2 updated:</div>
+			// <div style={{'background':color, 'height':"100px", "width":"100px"}}></div>
+			// <div>&nbsp;</div>
+			// <button onClick={onIncrementClicked}>Increment</button>
+			// <div>{count}</div>

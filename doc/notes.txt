@@ -1,4 +1,10 @@
 how to get new key for my github:
+go to Your personal access token has expired email for github,
+
+generated sept 27:
+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
+
+
 
 add thunk 
 add async await
